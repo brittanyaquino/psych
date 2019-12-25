@@ -66,23 +66,6 @@
 #nav li:hover ul {
     display: block;
 }
-
-
-#header {
-    background-image: url("img/team2.jpeg");
-    height: 500px;
-    background-size: cover;
-    background-position: top;
-
-    color: #DBC54E;
-    letter-spacing: 3.5px;
-    text-align: center;
-    line-height: 450px;
-    font-size: 1.8em;
-    text-shadow: 0px 0px 10px #000;
-
-}
-
 body {
     background-color: #9bcf9b;
     margin: 0px;

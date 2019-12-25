@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>PSYCH</title>
+        <title>Gallery</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <style>
         #header {
@@ -42,6 +41,15 @@
             float: left;
             background-color: #DBC54E;
             margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .med > img {
+            height: 100%;
+            width: auto;
+            position: relative;
+            right: 130px;
         }
 
         .small {
@@ -50,6 +58,15 @@
             float: left;
             background-color: #DBC54E;
             margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .small > img {
+            width: auto;
+            height: 100%;
+            position: relative;
+            right: 30px;
         }
 
         .large {
@@ -58,6 +75,13 @@
             float: left;
             background-color: #DBC54E;
             margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .large > img {
+            width: 100%;
+            height: auto;
         }
 
         .tiny {
@@ -66,7 +90,13 @@
             float: left;
             background-color: #DBC54E;
             margin: 10px;
+            overflow: hidden;
+            position: relative;
+        }
 
+        .tiny > img {
+            width: 100%;
+            height: auto;
         }
 
         .x-large {
@@ -75,8 +105,70 @@
             float: left;
             background-color: #DBC54E;
             margin: 10px;
+            overflow: hidden;
+            position: relative;
         }
 
+        .x-large > img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            display: none;
+            font-size: 1em;
+            line-height: 1.5em;
+
+        }
+
+        .med:hover .overlay {
+            padding-top: 300px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: block;
+        }
+
+        .small:hover .overlay {
+            padding-top: 100px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: block;
+        }
+
+        .large:hover .overlay {
+            display: block;
+            padding-top: 200px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .tiny:hover .overlay {
+            padding-top: 100px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: block;
+        }
+
+        .x-large:hover .overlay {
+            display: block;
+            padding: 200px;
+        }
+
+        #learn {
+            text-align: center;
+        }
+        #learn a {
+            text-decoration: none;
+        }
         
         </style>
     </head>
@@ -87,28 +179,111 @@
 
         <div id="navbar">
             <div id="nav">
-                <a href="index.html">Home</a>
-                <a id="active" href="gallery.html">Gallery</a>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#overview">Overview</a></li>
+                            <li><a href="index.html#characters">Characters</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a id="active" href="gallery.html">Gallery</a></li>
+                </ul>
             </div>
-        <div id="clearboth"></div>
-         </div>
+            <div class="clearboth"></div>
+        </div>
 
         <div id="gallery">
-            <h2>Psych Scenes</h2>
+            <h2>Memorable Quotes from the Show</h2>
+            <p id="learn"><a target="_blank" href="https://quotecatalog.com/quotes/tv/psych/page/5/">View more quotes!</a></p>
 
-            <div class="med"></div>
-            <div class="med"></div>
-            <div class="small"></div>
-            <div class="small"></div>
-            <div class="small"></div>
-            <div class="med"></div>
-            <div class="med"></div>
-            <div class="large"></div>
-            <div class="tiny"></div>
-            <div class="tiny"></div>
-            <div class="x-large"></div>
+            <div class="med">
+                <img src="img/beard.jpeg" alt="Gus pointing at Shawns beard">
+                <div class="overlay">
+                        "I can't help being a gorgeous fiend. It's just the card I drew.
+                        — Shawn Spencer (James Roday), Psych, Season 6: This Episode Sucks
+                </div>
+            </div>
+            <div class="med">
+                <img src="img/up.jpeg" alt="Shawn and Gus looking up">
+                <div class="overlay">
+                    There is a witness. There's a cat. I want to talk to that cat as soon as he's done licking himself... wow, I'm jealous.
+                    — Shawn Spencer (James Roday), Psych, Season 1: 9 Lives
+                </div>
+            </div>
+          
+            <div class="small">
+                <img src="img/think.jpeg" alt="Thinking">
+                <div class="overlay">
+                    Ahoy, there! Um, yes. Right. Um, my name is Shawn Spencer. This is my first mate, Hummingbird Saltalamacchia.
+                    — Shawn Spencer (James Roday), Psych, Season 3: Six Feet Under the Sea
+                </div>
+            </div>
+            <div class="small">
+                <img src="img/icecream.jpeg" alt="Shawn and gus are eating an icecream">
+                <div class="overlay">
+                    I can't believe you actually thought that text was from me. It lacked all nuance, my signature mocking tone, and was utterly devoid of emoticons.
+                     — Shawn Spencer (James Roday), Psych, Season 3: Lassie Did a Bad, Bad Thing
+                </div>
+            </div>
+    
+            <div class="small">
+                <img src="img/glasses.jpeg" alt="Gus and Shawn wearing glasses">
+                <div class="overlay">
+                    Partners do not lie to each other, because partners put their lives in each other's hands.
+                    — Carlton Lassiter (Timothy Omundson), Psych, Season 6: Shawn Rescues Darth Vader
+                </div>
+            </div>  
+            
+            <div class="med">
+                <img src="img/wedding.jpeg" alt="picture at wedding">
+                <div class="overlay">
 
-            <div id="clearboth"></div>
+                    Take lots of pictures. Not of sights. Don't take pictures of buildings. Take pictures of moments, because that's what matters.
+                    — Shawn Spencer (James Roday), Psych, Season 5: One, Maybe Two, Ways Out
+                </div>
+            </div>
+            <div class="med">
+                <img src="img/flower.jpeg" alt="Shawn and Juliet at a wedding">
+                <div class="overlay">
+                        I have an idea, but we'll need cool names.
+                        — Shawn Spencer (James Roday), Psych, Season 3: There Might Be Blood
+                </div>
+            </div>
+
+            <div class="large">
+                <img src="img/greenteam.jpeg" alt="team picture">
+                <div class="overlay">
+                    Suck it!
+                    — Burton 'Gus' Guster (Dule Hill), Psych, Season 4: A Very Juliet Episode
+                </div>
+            </div>
+            <div class="tiny">
+                <img src="img/stop.jpeg" alt="Team members stop waking">
+                <div class="overlay">
+                    Shawn: I can't watch Channel 8 anymore. Lloyd Lansing wears a toupee. It's like every newscast begins with a lie.
+                    — Shawn Spencer (James Roday), Psych, Season 4: The Head, The Tail, The Whole Damn Episode
+                </div>
+            </div>
+            <div class="tiny">
+                <img src="img/talk.jpeg" alt="Everyone's listening to Gus">
+                <div class="overlay">
+                    How can you tell that someone's a compulsive liar? I mean, assuming that their pants aren't on fire.
+                    — Shawn Spencer (James Roday), Psych, Season 3: Truer Lies
+                </div>
+            </div>
+
+            <div class="x-large">
+                <img src="img/gun.jpeg" alt="about to shoot">
+                <div class="overlay">
+                    Guster, you have to wake up to the real world: people have sex and kill each other. That's the real world. Not some magical 'feelings' place.
+                    — Carlton Lassiter (Timothy Omundson), Psych, Season 5: Feet Don't Kill Me Now
+                </div>
+            </div>
+
+            <div class="clearboth"></div>
         </div>
 
         <div id="footer">
